@@ -19,7 +19,7 @@ def main():
     si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
     subprocess.Popen(['git', 'add', '--all'], startupinfo=si).wait()
     subprocess.Popen(['git', 'commit', '-m', 'asd'], startupinfo=si).wait()
-    subprocess.Popen(['git', 'push'], startupinfo=si).wait()
+    subprocess.Popen(['git', 'push', '-f', 'origin', 'main'], startupinfo=si).wait()
     print('\ndone.')
 
 # random string a-z A-Z 0-9
